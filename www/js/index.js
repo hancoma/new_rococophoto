@@ -38,6 +38,14 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
      // 기능 넣을 부분
-     
+       document.addEventListener("menubutton", function(e)
+    {
+       
+
+ if (confirm('Exit')) {
+        navigator.app.exitApp();
+    }
+         
+       }, false);
     }
 };
