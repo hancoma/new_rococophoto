@@ -30,6 +30,14 @@ var app = {
     bindEvents: function() {
 		
         document.addEventListener('deviceready', this.onDeviceReady, false);
+			  alert("button on");
+       document.addEventListener("menubutton", function(e)
+    {
+       
+
+  alert("button off");
+         
+       }, false);
     },
     // deviceready Event Handler
     //
@@ -42,13 +50,6 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
      // 기능 넣을 부분
-	  alert("button on");
-       document.addEventListener("menubutton", function(e)
-    {
-       
 
-  alert("button off");
-         
-       }, false);
     }
 };
