@@ -1,7 +1,4 @@
-function getuuid() {
-        var uuid=device.uuid;
-        return uuid;
-}
+
  function getImage() {
 
         // Retrieve image file location from specified source
