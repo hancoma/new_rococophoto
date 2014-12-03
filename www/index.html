@@ -7,7 +7,7 @@
 		    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 
 
-<script type="text/javascript" charset="utf-8" src="http://m.rococophoto.net/js/app.js"></script>
+
 
   <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
 		
@@ -15,7 +15,7 @@
         <link type="text/css" rel="stylesheet" href="css/demo2.css" />
         
         <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
-    
+    <script type="text/javascript" charset="utf-8" src="http://m.rococophoto.net/js/app.js"></script>
 
             
 
@@ -83,16 +83,7 @@
     {
    
 
-            if( $("#homepage").length > 0 )
-        {
-            e.preventDefault();
-          //  pushNotification.unregister(successHandler, errorHandler);
-            navigator.app.exitApp();
-        }
-        else
-        {
-            navigator.app.backHistory();
-        }
+       alert("뒤로가기");
     
     }, false);
 
@@ -108,11 +99,7 @@
        }, false);
     }
 
-    // Handle the back button
-    //
-    function onBackKeyDown() {
-		alert("asdsad");
-    }
+  
 
 
 
