@@ -72,6 +72,16 @@
 
             function onLoad() {
     document.addEventListener("backbutton", backKeyDown, true);
+    document.addEventListener("menubutton", function(e)
+    {
+       
+
+ if (confirm('Exit')) {
+        navigator.app.exitApp();
+    }
+         
+       }, false);
+}
 }
 function backKeyDown() {
      var div = document.getElementById('myDiv');
