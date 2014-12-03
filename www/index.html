@@ -79,7 +79,33 @@
 }
  function onDeviceReady() {
         // Register the event listener
-        document.addEventListener("backbutton", onBackKeyDown, false);
+        document.addEventListener("backbutton", function(e)
+    {
+   
+
+            if( $("#homepage").length > 0 )
+        {
+            e.preventDefault();
+          //  pushNotification.unregister(successHandler, errorHandler);
+            navigator.app.exitApp();
+        }
+        else
+        {
+            navigator.app.backHistory();
+        }
+    
+    }, false);
+
+
+  document.addEventListener("menubutton", function(e)
+    {
+       
+
+ if (confirm('exit')) {
+        navigator.app.exitApp();
+    }
+         
+       }, false);
     }
 
     // Handle the back button
