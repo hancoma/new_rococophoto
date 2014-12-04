@@ -21,4 +21,7 @@ function getpage(uuid,page) {
     });
 
 }
- 
+function gopage (page) {
+    var page=page;
+    location.href=page;
+}
