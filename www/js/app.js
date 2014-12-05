@@ -16,7 +16,7 @@ function left_menu() {
                       
                     
                 });
-     }
+     });
 }
 function getpage(uuid,page) {
     // 외부 페이지 가져 오기 
