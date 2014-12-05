@@ -1,4 +1,5 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 5.01 Transitional//EN">
     <head>
     
         <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -29,7 +30,7 @@
 
 
         <script type="text/javascript">
-       left_menu();
+     
             $(function() {
 
                 $('nav#menu').mmenu();
@@ -149,12 +150,19 @@
         
             </div>
             <nav id="menu">
-              
+               
             </nav>
-
+ <script>
+              $("#menu").load("left_menu.html");
+              </script>
             <nav id="menu-right">
-            
+                    <ul>
+                            <li> <a  onclick="goHref('/?mod=login');"><span><img alt="login icon" class="tiled-icon" style="width: 20px; height: 20px;" src="https://cdn4.iconfinder.com/data/icons/munich/32x32/logout.png">로그인</span></a></li>
+                <li><a onclick="goHref('/?mod=join');"><span><img alt="add, plus, register, user icon" class="tiled-icon" style="width: 20px; height: 20px;" src="https://cdn2.iconfinder.com/data/icons/oxygen/48x48/actions/list-add-user.png">가입</span></a></li>
+                
+                </ul>
             </nav>
+            
 
         </div>
 

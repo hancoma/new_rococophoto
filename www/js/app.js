@@ -1,10 +1,10 @@
 function left_menu() {
-    var uuid=device.uuid;
+ 
      $( document ).ready(function() {
                     $.post("http://m.rococophoto.net/left_menu.php",
                {
                    
-                        uuid:uuid
+                 
                },
                function(data){
                 var data=data;
