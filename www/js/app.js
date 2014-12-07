@@ -18,6 +18,12 @@ function left_menu() {
                 });
      });
 }
+
+function goHref(url) {
+  var url=url;
+  url="http://m.rococophoto.net"+url;
+  var ref = window.open(url, '_blank', 'location=no');
+}
 function getpage(uuid,page) {
     // 외부 페이지 가져 오기 
         // uuid는 기기 번호 
