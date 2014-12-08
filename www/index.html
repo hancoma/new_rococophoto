@@ -90,6 +90,7 @@
  function onDeviceReady() {
         // Register the event listener
         var uuid=device.uuid;
+        alert(uuid);
             // uuid 정리 
         document.addEventListener("backbutton", function(e)
     {
@@ -763,5 +764,6 @@
 
         </div>
         <script>
-        check_uuid();
+        var uuid=device.uuid;
+        check_uuid(uuid);
         </script>

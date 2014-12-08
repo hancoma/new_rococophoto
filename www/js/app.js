@@ -56,23 +56,19 @@ function gopage (page) {
     location.href=page+"&uuid="+uuid;
 }
 
-function check_uuid () {
-        var uuid=device.uuid;
-                
-        
-
-                     $.post("http://m.rococophoto.net/check_uuid_app.php",
+function check_uuid(uuid) {
+        var uuid=uuid;
+        $.post("http://m.rococophoto.net/check_uuid_app.php",
        {
                 uuid:uuid
        },
        function(data){
         var data=data;
-        alert(data);
+
                 if (data=='ok') {
                     gopage("around.html?ok=ok");
                 } else {
                 show_login();
-        
                 }
 
         });
