@@ -21,7 +21,8 @@ function left_menu() {
 
 function goHref(url) {
   var url=url;
-  url="http://m.rococophoto.net"+url;
+  var uuid=uuid;
+  url="http://m.rococophoto.net"+url+"&uuid="+uuid;
   var ref = window.open(url, '_blank', 'location=no');
 }
 function getpage(uuid,page) {
@@ -52,3 +53,4 @@ function gopage (page) {
     var uuid=device.uuid;  
     location.href=page+"&uuid="+uuid;
 }
+
