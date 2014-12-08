@@ -25,6 +25,7 @@ function goHref(url) {
   url="http://m.rococophoto.net"+url+"&uuid="+uuid;
   var ref = window.open(url, '_blank', 'location=no');
 }
+
 function getpage(uuid,page) {
     // 외부 페이지 가져 오기 
         // uuid는 기기 번호 
@@ -48,9 +49,34 @@ function getpage(uuid,page) {
     });
 
 }
+
 function gopage (page) {
     var page=page;
     var uuid=device.uuid;  
     location.href=page+"&uuid="+uuid;
 }
 
+function check_uuid () {
+        var uuid=device.uuid;
+                
+        
+
+                     $.post("http://m.rococophoto.net/check_uuid_app.php",
+       {
+                uuid:uuid
+       },
+       function(data){
+        var data=data;
+        alert(data);
+                if (data=='ok') {
+                    gopage("around.html?ok=ok");
+                } else {
+                show_login();
+        
+                }
+
+        });
+
+
+    
+ }
