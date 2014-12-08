@@ -56,14 +56,14 @@ function gopage (page) {
     location.href=page+"&uuid="+uuid;
 }
 
-function check_uuid () {
-        var uuid=device.uuid;
+function check_uuid (deviceid) {
+        var deviceid=deviceid;
                 
         
 
                      $.post("http://m.rococophoto.net/check_uuid_app.php",
        {
-                uuid:uuid
+                deviceid:deviceid
        },
        function(data){
         var data=data;
