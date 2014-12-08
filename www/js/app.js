@@ -49,6 +49,6 @@ function getpage(uuid,page) {
 }
 function gopage (page) {
     var page=page;
-    var uuid=uuid;  
+    var uuid=device.uuid;  
     location.href=page+"?uuid="+uuid;
 }
