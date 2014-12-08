@@ -111,6 +111,20 @@
     }
          
        }, false);
+
+
+$( document ).ready(function() {
+             $.post("http://m.rococophoto.net/login_form_app.php",
+   {
+        uuid:uuid
+   },
+   function(data){
+        $("#content").html(data);
+    });
+
+});
+
+  
     }
 
   
@@ -119,14 +133,8 @@
 
     
        
-                var uuid=uuid;
-                         $.post("http://m.rococophoto.net/login_form_app.php",
-              {
-                    uuid:uuid
-              },
-              function(data){
-                    $("#content").html(data);
-                });
+                
+                       
 
         
 
