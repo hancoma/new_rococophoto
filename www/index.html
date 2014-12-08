@@ -117,9 +117,9 @@
 
 // 본문 처리 하기 
 
-    $( document ).ready(function() {
+    
        
-        
+                var uuid=uuid;
                          $.post("http://m.rococophoto.net/login_form_app.php",
               {
                     uuid:uuid
@@ -128,7 +128,8 @@
                     $("#content").html(data);
                 });
 
-           });
+        
+
  
  
   
