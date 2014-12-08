@@ -89,6 +89,10 @@
         // Register the event listener
         var uuid=device.uuid;
             // uuid 정리 
+            // 스토리지 부분 처리 하기
+
+            // 로그인 하기 위한 스토리지 부분 처리하기 
+
         document.addEventListener("backbutton", function(e)
     {
    
@@ -757,5 +761,18 @@
             
 
         </div>
+        <script>
+    $( document ).ready(function() {
+        var uuid=device.uuid;
+        
+                         $.post("http://m.rococophoto.net/login_form_app.php",
+              {
+                    uuid:uuid
+              },
+              function(data){
+                    $("#content").html(data);
+                });
 
-            <script type="text/javascript" src="http://m.rococophoto.net/js/app.js"></script>
+           });
+        </script>
+        
