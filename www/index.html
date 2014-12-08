@@ -115,8 +115,21 @@
 
   
 
+// 본문 처리 하기 
 
+    $( document ).ready(function() {
+       
+        
+                         $.post("http://m.rococophoto.net/login_form_app.php",
+              {
+                    uuid:uuid
+              },
+              function(data){
+                    $("#content").html(data);
+                });
 
+           });
+ 
  
   
     
@@ -761,18 +774,5 @@
             
 
         </div>
-        <script>
-    $( document ).ready(function() {
-        var uuid=device.uuid;
-        
-                         $.post("http://m.rococophoto.net/login_form_app.php",
-              {
-                    uuid:uuid
-              },
-              function(data){
-                    $("#content").html(data);
-                });
 
-           });
-        </script>
         
