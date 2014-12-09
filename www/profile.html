@@ -107,11 +107,8 @@
     }
          
        }, false);
-    }
 
-  
-
-var getParameter = function (param) {
+  var getParameter = function (param) {
     var returnValue;
     var url = location.href;
     var parameters = (url.slice(url.indexOf('?') + 1, url.length)).split('&');
@@ -124,7 +121,13 @@ var getParameter = function (param) {
     }
 };
 var uid=getParameter('uid');
-alert (uid);
+alert(uid);
+
+    }
+
+  
+
+
 
  
   
