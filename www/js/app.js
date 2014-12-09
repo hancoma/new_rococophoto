@@ -67,7 +67,7 @@ function check_uuid (deviceid) {
        },
        function(data){
         var data=data;
-        alert(data);
+      
                 if (data=='ok') {
                     gopage("around.html?ok=ok");
                 } else {
