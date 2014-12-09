@@ -71,6 +71,7 @@ function check_uuid (deviceid) {
                 if (data=='ok') {
                     gopage("around.html?ok=ok");
                 } else {
+                  alert(data);
                 show_login();
         
                 }
