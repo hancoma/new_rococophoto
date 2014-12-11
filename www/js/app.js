@@ -93,7 +93,7 @@ function check_uuid (deviceid) {
  }
 
 function onConfirm(buttonIndex) {
-    var deviceid=deviceid;
+    var deviceid=device.uuid;
     alert('You selected button ' + buttonIndex+deviceid);
 }
 
