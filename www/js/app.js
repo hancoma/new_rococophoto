@@ -82,5 +82,19 @@ function check_uuid (deviceid) {
     
  }
 
+  function logout() {
  
+    navigator.notification.confirm(
+    'Logout ?', // message
+     onConfirm,            // callback to invoke with index of button pressed
+    'Membership',           // title
+    ['Logout','Cancel']     // buttonLabels
+);
+ }
+
+function onConfirm(buttonIndex) {
+    var deviceid=deviceid;
+    alert('You selected button ' + buttonIndex+deviceid);
+}
+
 
