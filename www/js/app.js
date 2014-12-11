@@ -82,7 +82,7 @@ function check_uuid (deviceid) {
     
  }
 
- function logout(device) {
+ function logout(deviceid) {
     var deviceid=deviceid;
     navigator.notification.confirm(
     'Logout ?', // message
