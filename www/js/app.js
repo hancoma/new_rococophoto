@@ -94,7 +94,30 @@ function check_uuid (deviceid) {
 
 function onConfirm(buttonIndex) {
     var uuid=device.uuid;
-    alert('You selected button ' + buttonIndex+uuid);
+    var btn=buttonIndex;
+    if (btn==1) {
+
+      $.post("http://m.rococophoto.net/logout_app.php",
+       {
+                deviceid:uuid
+       },
+       function(data){
+        var data=data;
+           
+              navigator.notification.alert(
+                  '로그아웃 되었습니다.',  // message
+                  alertDismissed,         // callback
+                  'Membership',            // title
+                  'Done'                  // buttonName
+              );
+                
+            }
+
+        );
+    }
 }
 
+ function alertDismissed() {
+    // do something
+}
 
