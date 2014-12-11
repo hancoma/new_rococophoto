@@ -119,5 +119,6 @@ function onConfirm(buttonIndex) {
 
  function alertDismissed() {
     // do something
+     gopage("index.html?ok=ok");
 }
 
