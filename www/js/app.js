@@ -18,6 +18,7 @@ function left_menu() {
                 });
      });
 }
+var link;
 
 function goHref(url) {
   var url=url;
@@ -28,7 +29,7 @@ function goHref(url) {
     
 
         // 링크 주소 확인
-        var link=event.url;
+        link=event.url;
         var result=link.indexOf('upload_file');
         alert(result);
         // 파일 업로드 
@@ -180,7 +181,7 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
         options.chunkedMode = false;
 
         var ft = new FileTransfer();
-        ft.upload(imageURI, "http://m.rococophoto.net/upload_org.php", win, fail, options);
+        ft.upload(imageURI, "http://m.rococophoto.net/upload_org.php", win_photo, fail, options);
     }
 
     function win_photo(r) {
