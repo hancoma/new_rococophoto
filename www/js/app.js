@@ -18,8 +18,7 @@ function left_menu() {
                 });
      });
 }
-var link;
-var uuid;
+
 function goHref(url) {
   var url=url;
   var uuid=device.uuid;
@@ -29,8 +28,8 @@ function goHref(url) {
      navigator.notification.activityStart("Rococophoto", "loading".event.url);
 
         // 링크 주소 확인
-        link=event.url;
-        result=link.indexOf('upload_file');
+        var link=event.url;
+        var result=link.indexOf('upload_file');
         alert(result);
         // 파일 업로드 
         if(result>-1) {
