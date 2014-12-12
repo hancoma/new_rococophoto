@@ -105,6 +105,7 @@
     }
          
        }, false);
+
   var getParameter = function (param) {
     var returnValue;
     var url = location.href;
@@ -123,6 +124,7 @@ var sub_code=getParameter('sub_code');
     if (!sub_code) {
         sub_code='';
     }
+    alert(sub_code);
   show_global(uuid,sub_code);
     }
 
