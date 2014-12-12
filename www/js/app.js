@@ -26,12 +26,11 @@ function goHref(url) {
   url="http://m.rococophoto.net"+url+"&uuid="+uuid;
   var ref = window.open(url, '_blank', 'location=no');
   ref.addEventListener('loadstart', function(event) { 
-       alert(event.url);
      navigator.notification.activityStart("Rococophoto", "loading".event.url);
 
         // 링크 주소 확인
-        var link=event.url;
-        var result=link.indexOf('upload_file');
+        link=event.url;
+        result=link.indexOf('upload_file');
         alert(result);
         // 파일 업로드 
         if(result>-1) {
