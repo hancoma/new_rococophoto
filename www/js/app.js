@@ -169,6 +169,7 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 });}
     function uploadPhoto_photo(imageURI) {
       var deviceid=device.uuid;
+        navigator.notification.activityStart("RococoPhoto", "uploading photo");
         var options = new FileUploadOptions();
         options.fileKey="profile_image";
         options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
@@ -182,7 +183,6 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 
         options.params = params;
         options.chunkedMode = false;
-        alert(link);
         var ft = new FileTransfer();
         ft.upload(imageURI, "http://m.rococophoto.net/upload_org.php", win_photo, fail, options);
     }
@@ -191,5 +191,6 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
         console.log("Code = " + r.responseCode);
         console.log("Response = " + r.response);
         console.log("Sent = " + r.bytesSent);
+        navigator.notification.activityStop();
         alert(r.response);
     }
