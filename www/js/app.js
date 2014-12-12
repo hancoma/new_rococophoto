@@ -33,7 +33,7 @@ function goHref(url) {
         alert(result);
         // 파일 업로드 
         if(result>-1) {
-            getImage();
+            getImage_photo();
         }
   
   });
