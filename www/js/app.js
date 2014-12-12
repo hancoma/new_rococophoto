@@ -167,7 +167,7 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 });}
     function uploadPhoto_photo(imageURI) {
         var options = new FileUploadOptions();
-        options.fileKey="file";
+        options.fileKey="profile_image";
         options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
         options.mimeType="image/jpeg";
 
@@ -179,7 +179,7 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 
         options.params = params;
         options.chunkedMode = false;
-        alert(link);
+
         var ft = new FileTransfer();
         ft.upload(imageURI, "http://m.rococophoto.net/upload_org.php", win_photo, fail, options);
     }
