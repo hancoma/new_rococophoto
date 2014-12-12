@@ -18,6 +18,8 @@ function left_menu() {
                 });
      });
 }
+
+var deviceid;
 var link;
 
 function goHref(url) {
@@ -31,7 +33,7 @@ function goHref(url) {
         // 링크 주소 확인
         link=event.url;
         var result=link.indexOf('upload_file');
-        alert(result);
+    
         // 파일 업로드 
         if(result>-1) {
             getImage_photo();
@@ -166,6 +168,7 @@ destinationType: navigator.camera.DestinationType.FILE_URI,
 sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 });}
     function uploadPhoto_photo(imageURI) {
+      var deviceid=device.uuid;
         var options = new FileUploadOptions();
         options.fileKey="profile_image";
         options.fileName=imageURI.substr(imageURI.lastIndexOf('/')+1);
@@ -175,7 +178,7 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
         params.value1 = "test";
         params.value2 = "param";
         params.link=link;
-        params.uuid=uuid;
+        params.uuid=deviceid;
 
         options.params = params;
         options.chunkedMode = false;
