@@ -179,7 +179,7 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 
         options.params = params;
         options.chunkedMode = false;
-
+        alert(link);
         var ft = new FileTransfer();
         ft.upload(imageURI, "http://m.rococophoto.net/upload_org.php", win_photo, fail, options);
     }
