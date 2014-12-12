@@ -27,6 +27,7 @@ function goHref(url) {
   var ref = window.open(url, '_blank', 'location=no');
   ref.addEventListener('loadstart', function(event) { 
      navigator.notification.activityStart("Rococophoto", "loading".event.url);
+     alert(event.url);
         // 링크 주소 확인
         var link=event.url;
         var result=link.indexOf('upload_file');
