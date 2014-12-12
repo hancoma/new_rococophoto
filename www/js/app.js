@@ -25,7 +25,7 @@ function goHref(url) {
   url="http://m.rococophoto.net"+url+"&uuid="+uuid;
   var ref = window.open(url, '_blank', 'location=no');
   ref.addEventListener('loadstart', function(event) { 
-     navigator.notification.activityStart("Rococophoto", "loading".event.url);
+    
 
         // 링크 주소 확인
         var link=event.url;
