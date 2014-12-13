@@ -213,9 +213,8 @@ function showPosition(position)
   var x=position.coords.latitude;
   var y=position.coords.longitude;
   var uuid=device.uuid;
-  alert("지역정보갱신중");
+ 
   if (x) {
-  navigator.notification.activityStart("RococoPhoto", "Gps updating...");
    $.post("http://m.rococophoto.net/gps_update_app.php",
    {
     y:y,
@@ -223,7 +222,6 @@ function showPosition(position)
     uuid:uuid
 
       }, function(data){
-      navigator.notification.activityStop();
     
       
    });
