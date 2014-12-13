@@ -194,3 +194,35 @@ sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
         navigator.notification.activityStop();
         alert(r.response);
     }
+
+function getLocation()
+  {
+
+    if (navigator.geolocation)
+    {
+
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  else{
+    alert("현 위치의 정보를 찾을수 없습니다.");
+  }
+  }
+function showPosition(position)
+  {
+
+  var x=position.coords.latitude;
+  var y=position.coords.longitude;
+  var uuid=device.uuid;
+  // alert(uuid+"-"+x); 지녁 정보 ajax로 보내기 
+   $.post("http://m.rococophoto.net/gps_update_app.php",
+   {
+    y:y,
+    x:x,
+    uuid:uuid
+      
+      });
+   
+  }
+
+  
+
