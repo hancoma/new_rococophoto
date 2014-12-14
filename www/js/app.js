@@ -247,7 +247,7 @@ right_menu();
         for ( var i in rightmenu_data ) {
           var right_m="rightmenu"+i;
           var contents= rightmenu_data[i];
-        $("#rightmenu1").html('asd');
+        $("#"+right_m).html(contents);
 
       }
 
