@@ -227,6 +227,33 @@ function showPosition(position)
    });
    }
   }
+right_menu();
+  function right_menu () {
+    $( document ).ready(function() {
+      var deviceid=device.uuid;
 
-  
+  $.post("http://m.rococophoto.net/right_menu_app.php",
+   {
+    deviceid:deviceid
+
+      }, function(data){
+        var data=data;
+        alert(data);
+        var rightmenu_data=data.split('/');
+        
+
+        for ( var i in rightmenu_data ) {
+          var right_m="#rightmenu"+i;
+        $(right_m).html(rightmenu_data[i]);
+
+      }
+
+
+   });
+ 
+
+   
+    }); 
+}
+
 
