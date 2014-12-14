@@ -228,23 +228,26 @@ function showPosition(position)
    }
   }
 right_menu();
-  function right_menu () {
-      var deviceid=device.uuid;
 
-    $( document ).ready(function() {
+  function right_menu() {
+     
+
+ $( document ).ready(function() {
 
   $.post("http://m.rococophoto.net/right_menu_app.php",
    {
-    deviceid:deviceid
+  
 
       }, function(data){
         var data=data;
+  
         var rightmenu_data=data.split('/');
         
 
         for ( var i in rightmenu_data ) {
-          var right_m="#rightmenu"+i;
-        $(right_m).html(rightmenu_data[i]);
+          var right_m="rightmenu"+i;
+          var contents= rightmenu_data[i];
+        $("#rightmenu1").html('asd');
 
       }
 
@@ -252,8 +255,8 @@ right_menu();
    });
  
 
-   
-    }); 
+   });
+
 }
 
 
