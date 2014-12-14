@@ -230,13 +230,13 @@ function showPosition(position)
 right_menu();
 
   function right_menu() {
-     
+     var deviceid=device.uuid;
 
  $( document ).ready(function() {
 
   $.post("http://m.rococophoto.net/right_menu_app.php",
    {
-  
+      deviceid:deviceid;
 
       }, function(data){
         var data=data;
