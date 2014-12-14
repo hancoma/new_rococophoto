@@ -229,8 +229,9 @@ function showPosition(position)
   }
 right_menu();
   function right_menu () {
-    $( document ).ready(function() {
       var deviceid=device.uuid;
+
+    $( document ).ready(function() {
 
   $.post("http://m.rococophoto.net/right_menu_app.php",
    {
@@ -238,7 +239,6 @@ right_menu();
 
       }, function(data){
         var data=data;
-        alert(data);
         var rightmenu_data=data.split('/');
         
 
