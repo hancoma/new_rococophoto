@@ -236,7 +236,7 @@ right_menu();
 
   $.post("http://m.rococophoto.net/right_menu_app.php",
    {
-      deviceid:deviceid;
+      deviceid:deviceid
 
       }, function(data){
         var data=data;
