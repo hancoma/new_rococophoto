@@ -41,7 +41,7 @@ function goHref(url) {
 
         var result2=link.indexOf('goprofile');
           if(result2>-1) {
-            red.close();
+            ref.close();
             goprofile('13');
         }
 
