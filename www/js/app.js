@@ -38,7 +38,13 @@ function goHref(url) {
         if(result>-1) {
             getImage_photo();
         }
-  
+
+        var result2=link.indexOf('goprofile');
+          if(result2>-1) {
+            red.close();
+            goprofile('13');
+        }
+
   });
 }
 
@@ -70,6 +76,14 @@ function gopage (page) {
     var page=page;
     var uuid=device.uuid;  
     location.href=page+"&uuid="+uuid;
+}
+
+
+function goprofile (uid) {
+      var uid=uid;
+    var page=page;
+    var uuid=device.uuid;  
+    location.href="profile.html?uid="+uid+"&uuid="+uuid;
 }
 
 function check_uuid (deviceid) {
