@@ -1,3 +1,4 @@
+right_menu();
 function left_menu() {
  
      $( document ).ready(function() {
@@ -177,7 +178,7 @@ function getImage_photo() {
         navigator.camera.getPicture(uploadPhoto_photo, function(message) {
 alert('get picture failed');
 },{
-quality: 50,
+quality: 5,
 destinationType: navigator.camera.DestinationType.FILE_URI,
 sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
 });}
@@ -241,7 +242,7 @@ function showPosition(position)
    });
    }
   }
-right_menu();
+
 
   function right_menu() {
      var deviceid=device.uuid;
