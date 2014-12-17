@@ -42,8 +42,10 @@ function goHref(url) {
 
         var result2=link.indexOf('goprofile');
           if(result2>-1) {
+            var member=like.split("&");
+            var memberuid=member[member];
             ref.close();
-            goprofile('13');
+            goprofile(memberuid);
         }
 
   });
