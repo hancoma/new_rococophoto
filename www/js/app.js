@@ -1,4 +1,4 @@
-right_menu();
+
 function left_menu() {
  
      $( document ).ready(function() {
@@ -242,7 +242,7 @@ function showPosition(position)
    });
    }
   }
-
+right_menu();
 
   function right_menu() {
      var deviceid=device.uuid;
