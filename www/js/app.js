@@ -43,7 +43,8 @@ function goHref(url) {
         var result2=link.indexOf('goprofile');
           if(result2>-1) {
             var member=like.split("&");
-            var cnt=member.length;
+            var cnt=member.length-1;
+            alert(cnt);
             var memberuid=member[cnt];
 
             ref.close();
