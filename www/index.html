@@ -110,6 +110,17 @@
          
        }, false);
 
+
+ var success = function(status) {
+         navigator.notification.activityStop();
+        }
+
+        var error = function(status) {
+         navigator.notification.activityStop();
+        }
+navigator.notification.activityStart("RococoPhoto", "updating");
+        window.cache.clear( success, error );
+
   check_uuid(uuid);
  
  
