@@ -44,7 +44,7 @@ function goHref(url) {
           if(result2>-1) {
             var member=link.split("&");
             var cnt=member.length;
-            alert(cnt);
+         
             var memberuid=member[cnt];
 
             ref.close();
