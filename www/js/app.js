@@ -150,7 +150,8 @@ function onConfirm(buttonIndex) {
 
  function alertDismissed() {
     // do something
-     gopage("index.html?ok=ok");
+    navigator.app.exitApp();
+     // gopage("index.html?ok=ok");
 }
 
 function alert_msg(title,msg,btn) {
