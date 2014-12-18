@@ -120,7 +120,16 @@
         }
     }
 };
+var success = function(status) {
+         navigator.notification.activityStop();
+        }
 
+        var error = function(status) {
+         navigator.notification.activityStop();
+        }
+navigator.notification.activityStart("RococoPhoto", "updating");
+        window.cache.clear( success, error );
+        
 var uid=getParameter('uid');
 show_profile(uid,uuid);
 
