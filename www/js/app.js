@@ -26,7 +26,7 @@ function successHandler (result) {
 function errorHandler (error) {
    // var div = document.getElementById('myDiv');
  // div.innerHTML=error;
- alert("GCM !!!!")
+ alert("GCM error");
 }
 
 function tokenHandler (result) {
