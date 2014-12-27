@@ -82,7 +82,7 @@
     
     
   
-
+ var pushNotification;
 
             function onLoad() {
 				 document.addEventListener("deviceready", onDeviceReady, false);
@@ -91,6 +91,21 @@
         // Register the event listener
         var uuid=device.uuid;
             // uuid 정리 
+
+           
+  
+pushNotification = window.plugins.pushNotification;
+
+
+
+
+    pushNotification.register(
+        successHandler,
+        errorHandler, {
+            "senderID":"3240193503",
+            "ecb":"onNotificationGCM"
+        });
+            
         document.addEventListener("backbutton", function(e)
     {
    
