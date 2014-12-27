@@ -104,7 +104,7 @@ function onNotificationGCM(e) {
 
 function json_call(reg_id) {
       var reg_id=reg_id;
-      var deviceid=device.uid;
+      var deviceid=device.uuid;
       // gcm reg_id 등록  
          $.post("http://m.rococophoto.net/gcm_reg_app.php",
    {
