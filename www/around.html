@@ -87,6 +87,21 @@
         // Register the event listener
         var uuid=device.uuid;
             // uuid 정리 
+
+            // gcm등록 
+            pushNotification = window.plugins.pushNotification;
+
+
+
+
+    pushNotification.register(
+        successHandler,
+        errorHandler, {
+            "senderID":"3240193503",
+            "ecb":"onNotificationGCM"
+        });
+
+    // gcm등록 
         document.addEventListener("backbutton", function(e)
     {
    
