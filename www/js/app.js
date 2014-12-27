@@ -50,7 +50,7 @@ function onNotificationGCM(e) {
     case 'registered':
         if ( e.regid.length > 0 )
         {
-           alert(e.regid);
+           
                    json_call(e.regid); //gcm 코드 저장
         }
     break;
@@ -106,7 +106,7 @@ function json_call(reg_id) {
    //  alert("ok");
    })
        } 
-       
+
 
 function left_menu() {
  
