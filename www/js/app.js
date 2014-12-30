@@ -230,7 +230,7 @@ function check_uuid (deviceid) {
   function logout() {
  
     navigator.notification.confirm(
-    'Logout ?', // message
+    'Are you sure you want to log out?', // message
      onConfirm,            // callback to invoke with index of button pressed
     'Membership',           // title
     ['Logout','Cancel']     // buttonLabels
@@ -250,7 +250,7 @@ function onConfirm(buttonIndex) {
         var data=data;
            
               navigator.notification.alert(
-                  '로그아웃 되었습니다.',  // message
+                  'You have been signed out.',  // message
                   alertDismissed,         // callback
                   'Membership',            // title
                   'Done'                  // buttonName
