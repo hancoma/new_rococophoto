@@ -25,8 +25,8 @@
 
 		<script type="text/javascript" src="js/camera.js"></script>
         <script type="text/javascript" src="js/app.js"></script>
-    <script type="text/javascript" src="http://m.rococophoto.net/js/join.js"></script>
 
+    <script type="text/javascript" src="http://m.rococophoto.net/js/lank.js"></script>
 
         <script type="text/javascript">
             $(function() {
@@ -106,8 +106,7 @@
          
        }, false);
 
-
- var getParameter = function (param) {
+   var getParameter = function (param) {
     var returnValue;
     var url = location.href;
     var parameters = (url.slice(url.indexOf('?') + 1, url.length)).split('&');
@@ -120,10 +119,13 @@
     }
 };
 
-var language_code=getParameter('language_code');
+var cat=getParameter('cat');
 
-  show_join(uuid,language_code);
+    if (!cat) {
+        cat='';
+    }
 
+  show_talent(uuid,cat);
     }
 
   
@@ -165,7 +167,7 @@ var language_code=getParameter('language_code');
             
         
             </div>
-             <nav id="menu">
+           <nav id="menu">
                 <ul >
                                                         <li ><a href="around.html"  target="">
                         <img alt="local icon" class="tiled-icon" style="width: 20px; height: 20px;" src="https://cdn1.iconfinder.com/data/icons/google_jfk_icons_by_carlosjj/128/local.png"> 
@@ -743,7 +745,7 @@ var language_code=getParameter('language_code');
                         </li>
                                     </ul>
                             </li>
-                                    <li><a href="link.html"  target="">
+                                       <li><a href="link.html"  target="">
                             <img alt="blue, star icon" class="tiled-icon" style="width: 20px; height: 20px;" src="https://cdn0.iconfinder.com/data/icons/sweets/128/blue_star.png">
                             
             Link</a>
@@ -753,7 +755,7 @@ var language_code=getParameter('language_code');
                 </ul>
             </nav>
 
-             <nav id="menu-right">
+         <nav id="menu-right">
             <ul>
                             <li><span><img alt="login icon" class="tiled-icon" style="width: 20px; height: 20px;" src="https://cdn4.iconfinder.com/data/icons/munich/32x32/logout.png"><a  onclick="logout();"> <span id="rightmenu1">Logout</span></span></a></li>
                 <li><span><img alt="email, envelope, mail icon" class="tiled-icon" style="width: 20px; height: 20px;" src="https://cdn4.iconfinder.com/data/icons/simplicio/128x128/mail.png"><a onclick="goHref('/?mod=chat_main&uid=');"><span id="rightmenu2">Message Box</a></span></li>     
@@ -774,7 +776,4 @@ var language_code=getParameter('language_code');
 
         </div>
 
-        <script>
-        getLocation();
-
-        </script>
+        
